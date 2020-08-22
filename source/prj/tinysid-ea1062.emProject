@@ -1,0 +1,328 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="tinysid-ea1062" target="8" version="2">
+  <project Name="tinysid-ea1062">
+    <configuration
+      JLinkScriptFileName="$(ProjectDir)/evkmimxrt1060_sdram_init.jlinkscript"
+      Name="Common"
+      Placement="RAM"
+      Target="MIMXRT1062CVL5A"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M7"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv5-D16"
+      arm_interwork="No"
+      arm_linker_heap_size="256"
+      arm_linker_process_stack_size="2048"
+      arm_linker_stack_size="2048"
+      arm_simulator_memory_simulation_parameter="RAM;0x00000000;0x00020000;RAM;0x20000000;0x00020000;RAM;0x20200000;0x000C0000"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_device_name="MIMXRT1062xxx5A"
+      arm_target_interface_type="SWD"
+      build_intermediate_directory="$(Configuration)"
+      build_output_directory="$(Configuration)"
+      c_preprocessor_definitions="INITIALIZE_STACK;OSCILLATOR_CLOCK_FREQUENCY=24000000;CPU_MIMXRT1062CVL5A;MIMXRT1062xxxxx;__MIMXRT1062_FAMILY;ARM_MATH_CM7;USE_BOARD_EA1062;RTOS_TCTS;NO_GZIP;SKIP_SYSCLK_INIT;FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL=1;FSL_FEATURE_PHYKSZ8081_USE_RMII50M_MODE"
+      c_user_include_directories="..\\incprj;..\\common\\inc;..\\common\\library\\tcts\\inc;..\\common\\library\\tal_ea1062\\board\\ea1062\\inc;..\\common\\library\\tal_ea1062\\core\\inc;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\sdk\\v270\\cmsis\\core;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\sdk\\v270\\cmsis\\device;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\sdk\\v270\\drivers;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\inc;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\sdk\\v270\\sdmmc\\inc;..\\common\\library\\tal_ea1062\\cpu\\nxp\\imxrt1060\\sdk\\v270\\sdmmc\\port;..\\common\\library\\ipapi\\inc;..\\common\\library\\ipapi\\phy;..\\common\\library\\ipweb\\inc;..\\common\\library\\lwip\\src\\include;..\\common\\library\\lwip\\src\\include\\ipv4;..\\common\\library\\lwip_port\\dev;..\\common\\library\\lwip_port\\os;..\\common\\library\\uhttp\\inc;..\\common\\library\\uhttp\\addon\\inc;..\\common\\library\\fsapi\\inc;..\\common\\library\\fatfs\\src;..\\common\\library\\adler32;..\\common\\library\\minini\\dev;..\\common\\library\\mbedtls\\include;..\\common\\library\\mbedtls\\include\\mbedtls;..\\common\\library\\zlib;..\\inc"
+      debug_register_definition_file="$(ProjectDir)/MIMXRT1062_Registers.xml"
+      debug_target_connection="J-Link"
+      gcc_entry_point="reset_handler"
+      linker_memory_map_file="$(ProjectDir)/MIMXRT1062CVL5A_MemoryMap.xml"
+      linker_printf_fmt_level="long long"
+      linker_printf_fp_enabled="Float"
+      linker_printf_width_precision_supported="Yes"
+      linker_section_placement_file="$(ProjectDir)/ram_placement.xml"
+      project_type="Executable"
+      target_reset_script="Reset();"
+      target_script_file="$(ProjectDir)/MIMXRT1062_Target.js"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <folder Name="src">
+        <file file_name="../src/main.c" />
+        <file file_name="../src/xmempool.c" />
+        <file file_name="../src/web_cgi_ext_cst.c" />
+        <file file_name="../src/web_ssi_ext_cst.c" />
+      </folder>
+      <folder Name="common">
+        <folder Name="library">
+          <folder Name="tal">
+            <folder Name="board">
+              <folder Name="xip">
+                <file file_name="../common/library/tal_ea1062/board/ea1062/src/xip/evkmimxrt1060_flexspi_nor_ecoxip_config.c" />
+                <file file_name="../common/library/tal_ea1062/board/ea1062/src/xip/evkmimxrt1060_sdram_ini_dcd.c" />
+                <file file_name="../common/library/tal_ea1062/board/ea1062/src/xip/fsl_flexspi_nor_boot.c" />
+              </folder>
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/board.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/clock_config.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/eth_config.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/fatfs_diskio.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/pin_mux.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/talboard.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/talgpio.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/talled.c" />
+              <file file_name="../common/library/tal_ea1062/board/ea1062/src/pca6416.c" />
+            </folder>
+            <folder Name="core">
+              <file file_name="../common/library/tal_ea1062/core/src/tal.c" />
+              <file file_name="../common/library/tal_ea1062/core/src/talcom.c" />
+              <file file_name="../common/library/tal_ea1062/core/src/taldebug.c" />
+              <file file_name="../common/library/tal_ea1062/core/src/talmem.c" />
+              <file file_name="../common/library/tal_ea1062/core/src/talmisc.c" />
+            </folder>
+            <folder Name="cpu">
+              <folder Name="sdk">
+                <folder Name="cmsis">
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/cmsis/device/system_MIMXRT1062.c">
+                    <configuration
+                      Name="Common"
+                      default_code_section=".init"
+                      default_const_section=".init_rodata" />
+                  </file>
+                </folder>
+                <folder Name="drivers">
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_clock.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_gpio.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_lpuart.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_cache.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_common.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_usdhc.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_enet.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_lpi2c.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_trng.c" />
+                  <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/drivers/fsl_wdog.c" />
+                </folder>
+                <folder Name="sdmmc">
+                  <folder Name="port">
+                    <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/sdmmc/port/usdhc/tcts/fsl_sdmmc_event.c" />
+                    <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/sdmmc/port/usdhc/tcts/fsl_sdmmc_host.c" />
+                  </folder>
+                  <folder Name="src">
+                    <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/sdmmc/src/fsl_sd.c" />
+                    <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/sdk/v270/sdmmc/src/fsl_sdmmc_common.c" />
+                  </folder>
+                </folder>
+              </folder>
+              <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/src/talcpu.c" />
+              <file file_name="../common/library/tal_ea1062/cpu/nxp/imxrt1060/src/talcpu_com.c" />
+            </folder>
+          </folder>
+          <folder Name="tcts">
+            <file file_name="../common/library/tcts/src/tcts.c" />
+          </folder>
+          <folder Name="ipapi">
+            <file file_name="../common/library/ipapi/src/ip_mdns.c" />
+            <file file_name="../common/library/ipapi/src/ipstack.c" />
+            <file file_name="../common/library/ipapi/src/ip_dhcp.c" />
+            <file file_name="../common/library/ipapi/src/ip_dhcpserver.c" />
+            <file file_name="../common/library/ipapi/src/ip_dns.c" />
+            <file file_name="../common/library/ipapi/src/ip_sntp.c" />
+            <file file_name="../common/library/ipapi/src/ip_sntpserver.c" />
+            <file file_name="../common/library/ipapi/src/ip_syslog.c" />
+            <file file_name="../common/library/ipapi/src/ip_tnp.c" />
+          </folder>
+          <folder Name="lwip_port">
+            <folder Name="dev">
+              <file file_name="../common/library/lwip_port/dev/ethernetif.c" />
+              <file file_name="../common/library/lwip_port/dev/fsl_phy.c" />
+            </folder>
+            <folder Name="os">
+              <file file_name="../common/library/lwip_port/os/sys_arch.c" />
+            </folder>
+          </folder>
+          <folder Name="lwip">
+            <folder Name="api">
+              <file file_name="../common/library/lwip/src/api/api_lib.c" />
+              <file file_name="../common/library/lwip/src/api/api_msg.c" />
+              <file file_name="../common/library/lwip/src/api/err.c" />
+              <file file_name="../common/library/lwip/src/api/netbuf.c" />
+              <file file_name="../common/library/lwip/src/api/netdb.c" />
+              <file file_name="../common/library/lwip/src/api/netifapi.c" />
+              <file file_name="../common/library/lwip/src/api/sockets.c" />
+              <file file_name="../common/library/lwip/src/api/tcpip.c" />
+            </folder>
+            <folder Name="core">
+              <folder Name="ipv4">
+                <file file_name="../common/library/lwip/src/core/ipv4/acd.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/autoip.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/dhcp.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/etharp.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/icmp.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/igmp.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/ip4.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/ip4_addr.c" />
+                <file file_name="../common/library/lwip/src/core/ipv4/ip4_frag.c" />
+              </folder>
+              <file file_name="../common/library/lwip/src/core/def.c" />
+              <file file_name="../common/library/lwip/src/core/dns.c" />
+              <file file_name="../common/library/lwip/src/core/inet_chksum.c" />
+              <file file_name="../common/library/lwip/src/core/init.c" />
+              <file file_name="../common/library/lwip/src/core/ip.c" />
+              <file file_name="../common/library/lwip/src/core/mem.c" />
+              <file file_name="../common/library/lwip/src/core/memp.c" />
+              <file file_name="../common/library/lwip/src/core/netif.c" />
+              <file file_name="../common/library/lwip/src/core/pbuf.c" />
+              <file file_name="../common/library/lwip/src/core/stats.c" />
+              <file file_name="../common/library/lwip/src/core/tcp.c" />
+              <file file_name="../common/library/lwip/src/core/tcp_in.c" />
+              <file file_name="../common/library/lwip/src/core/tcp_out.c" />
+              <file file_name="../common/library/lwip/src/core/timeouts.c" />
+              <file file_name="../common/library/lwip/src/core/udp.c" />
+            </folder>
+            <folder Name="netif">
+              <file file_name="../common/library/lwip/src/netif/ethernet.c" />
+            </folder>
+          </folder>
+          <folder Name="adler32">
+            <file file_name="../common/library/adler32/adler32.c" />
+          </folder>
+          <folder Name="fatfs">
+            <file file_name="../common/library/fatfs/src/ff.c" />
+            <file file_name="../common/library/fatfs/src/ffunicode.c" />
+          </folder>
+          <folder Name="fsapi">
+            <file file_name="../common/library/fsapi/src/fs_fatfs.c" />
+            <file file_name="../common/library/fsapi/src/fs_romfs.c" />
+            <file file_name="../common/library/fsapi/src/fs_xfile.c" />
+            <file file_name="../common/library/fsapi/src/fsapi.c" />
+          </folder>
+          <folder Name="ipweb">
+            <file file_name="../common/library/ipweb/src/ipweb.c" />
+            <file file_name="../common/library/ipweb/src/web_cgi.c" />
+            <file file_name="../common/library/ipweb/src/web_ssi.c" />
+            <file file_name="../common/library/ipweb/src/ipweb_ssl.c" />
+            <file file_name="../common/library/ipweb/src/web_sid_non_tls.c" />
+          </folder>
+          <folder Name="minini">
+            <file file_name="../common/library/minini/dev/minIni.c" />
+          </folder>
+          <folder Name="time">
+            <file file_name="../common/library/time/time.c" />
+            <file file_name="../common/library/time/time64.c" />
+          </folder>
+          <folder Name="uhttp">
+            <folder Name="modules">
+              <file file_name="../common/library/uhttp/src/modules/mod_auth_basic.c" />
+              <file file_name="../common/library/uhttp/src/modules/mod_cgi_func.c" />
+              <file file_name="../common/library/uhttp/src/modules/mod_redir.c" />
+              <file file_name="../common/library/uhttp/src/modules/mod_ssi.c" />
+            </folder>
+            <folder Name="os">
+              <file file_name="../common/library/uhttp/src/os/tcts/rfctime.c" />
+              <file file_name="../common/library/uhttp/src/os/tcts/streamio.c" />
+            </folder>
+            <file file_name="../common/library/uhttp/src/envinit.c" />
+            <file file_name="../common/library/uhttp/src/envreg.c" />
+            <file file_name="../common/library/uhttp/src/envvars.c" />
+            <file file_name="../common/library/uhttp/src/mediatypes.c" />
+            <file file_name="../common/library/uhttp/src/mtreg.c" />
+            <file file_name="../common/library/uhttp/src/responses.c" />
+            <file file_name="../common/library/uhttp/src/uhttpd.c" />
+            <file file_name="../common/library/uhttp/src/utils.c" />
+          </folder>
+          <folder Name="mbedtls">
+            <file file_name="../common/library/mbedtls/library/base64.c" />
+            <file file_name="../common/library/mbedtls/library/bignum.c" />
+            <file file_name="../common/library/mbedtls/library/sha256.c" />
+            <file file_name="../common/library/mbedtls/library/platform_util.c" />
+            <file file_name="../common/library/mbedtls/library/blowfish.c" />
+          </folder>
+          <folder Name="zlib">
+            <file file_name="../common/library/zlib/compress.c" />
+            <file file_name="../common/library/zlib/deflate.c" />
+            <file file_name="../common/library/zlib/infback.c" />
+            <file file_name="../common/library/zlib/inffast.c" />
+            <file file_name="../common/library/zlib/inflate.c" />
+            <file file_name="../common/library/zlib/inftrees.c" />
+            <file file_name="../common/library/zlib/trees.c" />
+            <file file_name="../common/library/zlib/uncompr.c" />
+            <file file_name="../common/library/zlib/zutil.c" />
+          </folder>
+        </folder>
+        <folder Name="src">
+          <file file_name="../common/src/terminal.c" />
+          <file file_name="../common/src/iperf.c" />
+          <file file_name="../common/src/cert.c" />
+          <file file_name="../common/src/etc.c" />
+          <file file_name="../common/src/fs.c" />
+          <file file_name="../common/src/minglue.c" />
+          <file file_name="../common/src/nvm.c" />
+          <file file_name="../common/src/xbin.c" />
+        </folder>
+        <folder Name="webpage">
+          <file file_name="../common/webpage/romfs_data.c" />
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="System Files">
+      <file file_name="thumb_crt0.s" />
+      <file file_name="MIMXRT1062_Startup.s">
+        <configuration
+          Name="SDRAM"
+          c_preprocessor_definitions="__RAM_segment_end__=__DTCM_segment_end__" />
+        <configuration
+          Name="Flash"
+          c_preprocessor_definitions="__RAM_segment_end__=__DTCM_segment_end__" />
+        <configuration
+          Name="Flash to SDRAM"
+          c_preprocessor_definitions="__RAM_segment_end__=__DTCM_segment_end__" />
+        <configuration
+          Name="SDRAM Boot"
+          c_preprocessor_definitions="__RAM_segment_end__=__DTCM_segment_end__" />
+      </file>
+      <file file_name="MIMXRT1062_Vectors.s">
+        <configuration Name="Common" file_type="Assembly" />
+      </file>
+      <file file_name="SEGGER_HardFault_Handler.s" />
+      <file file_name="SEGGER_HardFaultHandler.c" />
+    </folder>
+    <configuration
+      Name="SDRAM"
+      c_preprocessor_definitions="__SDRAM__"
+      linker_section_placement_file="$(ProjectDir)/tcm_sdram_placement.xml" />
+    <configuration
+      Name="Release"
+      gcc_debugging_level="Level 2"
+      gcc_optimization_level="Level 3" />
+    <configuration
+      Name="Flash"
+      c_preprocessor_definitions="__FLASH__;VECTORS_IN_RAM;XIP_EXTERNAL_FLASH=1;XIP_BOOT_HEADER_ENABLE=1;XIP_BOOT_HEADER_DCD_ENABLE=1"
+      linker_output_format="hex"
+      linker_section_placement_file="$(ProjectDir)/flash_placement.xml" />
+    <configuration
+      Name="Flash to SDRAM"
+      c_preprocessor_definitions="__FLASH_2_SDRAM__;VECTORS_IN_RAM;XIP_EXTERNAL_FLASH=1;XIP_BOOT_HEADER_ENABLE=1;XIP_BOOT_HEADER_DCD_ENABLE=1"
+      linker_section_placement_file="$(ProjectDir)/flash_to_sdram_placement.xml" />
+    <configuration Name="Debug" c_preprocessor_definitions="DEBUG=1" />
+    <configuration
+      Name="SDRAM Boot"
+      c_preprocessor_definitions="__SDRAM__;__SDRAM_BOOT__;VECTORS_IN_RAM"
+      linker_output_format="bin"
+      linker_section_placement_file="$(ProjectDir)/sdram_boot_placement.xml" />
+  </project>
+  <configuration Name="SDRAM" hidden="Yes" />
+  <configuration Name="Debug" hidden="Yes" />
+  <configuration Name="Release" hidden="Yes" />
+  <configuration Name="SDRAM Debug" inherited_configurations="SDRAM;Debug" />
+  <configuration
+    Name="SDRAM Release"
+    inherited_configurations="SDRAM;Release" />
+  <configuration Name="Flash" hidden="Yes" />
+  <configuration Name="Flash Debug" inherited_configurations="Flash;Debug" />
+  <configuration
+    Name="Flash Release"
+    inherited_configurations="Flash;Release" />
+  <configuration Name="Flash to SDRAM" hidden="Yes" />
+  <configuration
+    Name="Flash to SDRAM Debug"
+    inherited_configurations="Debug;Flash to SDRAM" />
+  <configuration
+    Name="Flash to SDRAM Release"
+    inherited_configurations="Release;Flash to SDRAM" />
+  <configuration Name="SDRAM Boot" hidden="Yes" />
+  <configuration
+    Name="SDRAM Boot Debug"
+    inherited_configurations="Debug;SDRAM Boot" />
+  <configuration
+    Name="SDRAM Boot Release"
+    inherited_configurations="Release;SDRAM Boot" />
+</solution>

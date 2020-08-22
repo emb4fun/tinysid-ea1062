@@ -1,0 +1,5 @@
+
+Changelog of the TinySID Server for the Embedded Artists iMX RT1062 Developer's Kit.
+
+= Version 1.00, 22.08.2020
+   * Initial public release without TLS functionality.

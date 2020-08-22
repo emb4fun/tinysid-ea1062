@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="content-type"     content="text/html;charset=iso-8859-1"/>
+    <meta http-equiv="content-language" content="en"/>
+    <meta http-equiv="pragma"           content="no-cache"/>
+    <title><%sys_longname%></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>          
+    <script type="text/javascript" src="../js/system.js"></script>
+  </head>        
+
+  <body bgcolor="#ffffff">
+    <table class="table_body">
+      <tr align="center">
+        <td> 
+        
+          <!-- Header -->
+          <div class="header">
+            <h1><%sys_longname%></h1>
+            <div class="div"></div>
+            <div class="login"><a href="../logout.htm">Logout</a></div>
+            <div class="logo"></div>
+          </div>
+      
+          <!-- Navigation #1 -->
+          <table class="table_navi1">
+            <tr>
+              <td>&nbsp;</td>
+              <td class="main">
+                <ul>
+                  <li class="nb"><a href="../home/index.htm">Home</a></li>
+                  <li class="nm"><a class="active" href="#">User 1</a></li>
+                  <li class="nm"><a href="../user2/index.htm">User 2</a></li>
+                  <li class="ne"><a href="../main/index.htm">Maintenance</a></li>
+                </ul>
+              </td>
+              <td>&nbsp;</td>
+            </tr>
+          </table> 
+
+          <!-- Navigation #2, #3 -->
+          <div class="navi2">
+            <p><%sys_shortname%></p>
+          </div> 
+          <div class="navi3"></div>
+
+          <!-- table_row -->
+          <table class="table_row">
+            <tr align="center">
+              <td>
+              
+                <table class="table_variable">
+                  <thead>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>User 1</td>
+                      <td>&nbsp;</td>
+                    </tr>                            
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>
+                      
+                        <div class="content">
+                          <form method="post" action="/cgi-bin/user1_set.cgi">
+                            <fieldset>
+                              <label class="normal">&nbsp;</label>
+                              <br/>
+                              
+                              <label class="normal">Value</label>
+                              <p><%sys_user1_value%></p>
+                              <br/>
+                              <label class="normal">New Value</label>
+                              <input type="text" id="value" name="value" value="<%sys_user1_value%>" pattern="[0-9]+" />
+                              <br/>
+                              
+                              <input type="hidden" name="redir" value="/user1/index.htm"/>
+                              <label class="normal">&nbsp;</label>
+                              <button class="save" type="submit" name="button" value="Submit">
+                                Save
+                              </button>
+                              <button class="cancel" type="reset">
+                                Cancel
+                              </button>
+                            </fieldset>
+                          </form>
+                          <br/>
+                                                    
+                        </div>
+                        
+                      </td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </tbody>
+                  
+                  <tfoot>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>                            
+                  </tfoot>                            
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- table_row --> 
+
+        </td>
+      </tr>
+    </table> <!-- table_body -->
+  </body>
+</html>
